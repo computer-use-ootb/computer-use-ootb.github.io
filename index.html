@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="The Dawn of GUI Agent: A Preliminary Case Study with Claude 3.5 Computer Use">
+  <meta name="keywords" content="GUI Agent, LLM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Dawn of GUI Agent: A Preliminary Case Study with Claude 3.5 Computer Use</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NK0EL3H293"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-NK0EL3H293');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/sunrise-96.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    .navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+      position: fixed;
+      width: 100%;
+      transition: background-color 0.5s ease;
+      /* 为背景颜色改变添加过渡效果 */
+    }
+
+    .navbar.scrolled {
+      background-color: #333;
+    }
+
+    .navbar li {
+      float: left;
+    }
+
+    .navbar li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 12px 12px;
+      text-decoration: none;
+      transition: color 0.5s ease;
+      /* 为文本颜色改变添加过渡效果 */
+    }
+
+    .navbar.scrolled li a {
+      color: white;
+    }
+
+    /* .navbar li a:hover {
+      background-color: #111;
+    } */
+  </style>
+
+  <script>
+    window.onscroll = function () {
+      var navbar = document.getElementById('navbar');
+      if (window.pageYOffset > 0) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <ul class="navbar" id="navbar">
+    <li>
+        <a href="https://github.com/showlab/computer_use_ootb" target="_blank"> <!-- Updated href -->
+            <strong>🤖 Computer Use OOTB</strong>
+        </a>
+    </li>
+</ul>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">The Dawn of GUI Agent: A Preliminary Case Study with Claude 3.5 Computer Use</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sites.google.com/view/showlab">Siyuan Hu</a>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/showlab">Mingyu Ouyang</a>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/showlab">Difei Gao</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/showlab">Mike Shou</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">ShowLab, National University of Singapore</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2411.10323"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2411.10323"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=Ychd-t24HZw"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/showlab/computer_use_ootb"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+    <!-- Game Section -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Game (Honkai: Star Rail)</h2>
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <div class="video-container">
+              <p class="caption"><i>Claude 3.5 Computer Use</i> can help complete Honkai: Star Rail daily tasks, accurately locating and interacting with in-game elements.</p>
+              <video width="100%" height="315" controls autoplay muted>
+                <source src="./static/videos/webpage_star_rail.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="video-container">
+              <p class="caption">We can also automate warping (gacha pulls) in the game using <i>Claude 3.5 Computer Use</i>—and even get pretty lucky while we're at it! 🥳</p>
+              <video width="100%" height="315" controls autoplay muted>
+                <source src="./static/videos/webpage_warp.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Game Section -->
+    
+    <!-- Office Section -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Office (Presentation + Spreadsheets)</h2>
+        <div class="columns is-centered">
+          <div class="column is-6">
+            <div class="video-container" style="position: relative;">
+              <p class="caption"><i>Claude 3.5 Computer Use</i> can help complete office software tasks, observe and generate correct plans, and accurately execute the plan actions, showcasing its strong planning, action and critic capabilities.</p>
+              <video width="100%" height="315" controls autoplay muted>
+                <source src="./static/videos/webpage_gradient_fill.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="video-container" style="position: relative;">
+              <p class="caption"><i>Claude 3.5 Computer Use</i> can streamline the entire GUI task, from opening the target application, navigating in the webpage, to performing actions that are tailored to the task at hand.</p>
+              <video width="100%" height="315" controls autoplay muted>
+                <source src="./static/videos/webpage_google_sheets.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ Office Section -->
+    
+    <!-- Interpolating. -->
+    <h3 class="title is-4">Steps during task execution</h3>
+    <div class="content has-text-justified">
+      <p>
+        We can also visualize the steps during task execution, including each GUI state and the reasoning from the model.
+      </p>
+    </div>
+    <div class="columns is-vcentered interpolation-panel">
+      <div class="column interpolation-video-column">
+        <div id="interpolation-image-wrapper">
+          Loading...
+        </div>
+        <input class="slider is-fullwidth is-large is-info"
+              id="interpolation-slider"
+              step="1" min="0" max="10" value="0" type="range">
+      </div>
+      <div class="column is-4 has-text-centered">
+        <div class="message-bubble">
+            <span class="bot-icon">🤖</span> <!-- Bot emoji -->
+            <strong>Claude 3.5 Computer Use:</strong>
+            <span id="interpolation-message">Message will appear here.</span>
+        </div>
+    </div>
+    </div>
+    <br/>
+    <!--/ Interpolating. -->
+
+  </div>
+</section>
+
+
+<section class="section"></section>
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            The recently released model,  <i>Claude 3.5 Computer Use</i>, stands out as the first frontier AI model to offer computer use in public beta as a graphical user interface (GUI) agent. As an early beta, its capability in the real-world complex environment remains unknown.
+          </p>
+          <p>
+            In this case study to explore <i>Claude 3.5 Computer Use</i>, we curate and organize a collection of carefully designed tasks spanning a variety of domains and software. Observations from these cases demonstrate <i>Claude 3.5 Computer Use</i>'s unprecedented ability in end-to-end language to desktop actions. Along with this study, we provide an out-of-the-box agent framework for deploying API-based GUI automation models with easy implementation. 
+          </p>
+          <p>
+            Our case studies aim to showcase a groundwork of capabilities and limitations of <i></span>Claude 3.5 Computer Use</i> with detailed analyses and bring to the fore questions about planning, action, and critic which must be considered for future improvement. We hope this preliminary exploration will inspire future research into the GUI agent community.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="font-family: 'YourOriginalFont', sans-serif;"> <!-- Replace with your desired font -->
+          Remotely automate your computer with <i>Claude 3.5 Computer Use</i> and <i>Computer Use OOTB</i>🦾
+        </h2>
+        <p style="font-size: 0.9em; margin: 0;"> <!-- Adjust font size as needed -->
+          Computer Use OOTB is a out-of-the-box, cross-platform framework for deploying API-based GUI automation models on your computer with ease, no configuration needed.
+        </p>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/Ychd-t24HZw?rel=0&amp;showinfo=0&amp;autoplay=1&amp;mute=1"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{hu2024dawn,
+  author    = {Siyuan Hu and Mingyu Ouyang and Difei Gao and Mike Shou},
+  title     = {The Dawn of GUI Agent: A Preliminary Case Study with Claude 3.5 Computer Use},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/pdf/The_Dawn_of_GUI_Agent.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://computer-use-ootb.github.io" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content"  >
+          <p>
+            This page was built using the <a href='https://github.com/nerfies/nerfies.github.io'>Nerfies</a> project page, a nice template. You are free to borrow the source code of this website, we just ask that you link back to this page in the footer.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
