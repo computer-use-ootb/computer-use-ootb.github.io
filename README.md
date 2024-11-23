@@ -5,7 +5,7 @@ This is the repository that contains source code for the [Computer-Use-OOTB webs
 If you find Computer-Use-OOTB useful for your work please cite:
 ```
 @article{hu2024dawn,
-  author    = {Siyuan Hu and Mingyu Ouyang and Difei Gao and Mike Shou},
+  author    = {Siyuan Hu and Mingyu Ouyang and Difei Gao and Mike Zheng Shou},
   title     = {The Dawn of GUI Agent: A Preliminary Case Study with Claude 3.5 Computer Use},
   year      = {2024},
 }
